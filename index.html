@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Loop - Evento de Veículos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #d60000;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    form input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    .assinatura {
+      margin-top: 30px;
+      text-align: right;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://ibb.co/7NN66fWr" alt="Banner do Evento Loop">
+    <h1>Cadastro de Oferta</h1>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+
+      <label for="veiculo">Veículo:</label>
+      <input type="text" id="veiculo" name="veiculo" placeholder="Marca / Modelo / Ano">
+
+      <label for="valor">Valor:</label>
+      <input type="text" id="valor" name="valor" placeholder="R$ 00.000,00">
+
+      <label for="data">Data:</label>
+      <input type="date" id="data" name="data">
+
+      <label for="diretor">Assinatura do Diretor:</label>
+      <input type="text" id="diretor" name="diretor" placeholder="Nome do Diretor">
+    </form>
+
+    <div class="assinatura">
+      Campo Largo, <span id="dataAtual"></span>
+    </div>
+  </div>
+
+  <script>
+    const hoje = new Date();
+    const dataFormatada = hoje.toLocaleDateString('pt-BR');
+    document.getElementById('dataAtual').textContent = dataFormatada;
+  </script>
+</body>
+</html>
